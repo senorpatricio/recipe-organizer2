@@ -39,11 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.recipes',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
 ]
 
 MIDDLEWARE_CLASSES = [
-    'corsheaders.middleware.CorsMiddleWare',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,10 +124,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#turn this on when it goes into development
+
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
-    'localhost/'
+    'localhost/',
 )
 
+#turn this off when it goes into development
 CORS_ORIGIN_ALLOW_ALL = True

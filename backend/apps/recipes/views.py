@@ -1,5 +1,6 @@
 from rest_framework import generics
-from serializers import *
+from serializers import RecipeSerializer
+from models import Recipe
 
 
 class RecipeList(generics.ListAPIView):

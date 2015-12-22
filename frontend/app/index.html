@@ -11,6 +11,7 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -18,10 +19,17 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/recipes">List of Recipes</a></li>
-    <li><a href="#/add-recipe">Add a New Recipe</a></li>
-  </ul>
+
+<!--<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <ul class="menu">
+      <li><a href="#/recipes">List of Recipes</a></li>
+      <li><a href="#/add-recipe">Add a New Recipe</a></li>
+    </ul>
+  </div>
+</nav>-->
+  
+  
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -29,7 +37,21 @@
 
   <div ng-view></div>
 
-  
+  <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-text pull-left">
+          <p style="color:#fff; float:left;margin-bottom:0;"><a href="http://www.patrickmharding.com" style="color:#fff;">patrickmharding.com</a>  |  © 2015 Patrick Harding. All Rights Reserved</p> 
+      </div>
+      <div class="navbar-text pull-right">
+        <p style="display: inline; color: #fff;">Connect with me:  </p>
+        <a href="https://www.instagram.com/patcherk" target="_blank"><i class="fa fa-instagram fa-2x nav-icons"></i></a>
+        <a href="https://www.linkedin.com/in/patrickmharding" target="_blank"><i class="fa fa-linkedin-square fa-2x nav-icons"></i></a>
+        <a href="https://github.com/senorpatricio" target="_blank"><i class="fa fa-github-square fa-2x nav-icons"></i></a>
+        <a href="https://twitter.com/harding1983" target="_blank"><i class="fa fa-twitter-square fa-2x nav-icons"></i></a>
+      </div>
+    </div>
+    
+  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>

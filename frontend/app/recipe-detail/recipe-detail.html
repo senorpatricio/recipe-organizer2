@@ -1,3 +1,33 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">A Pinchasalt, Eh?</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/recipes">List of Recipes <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/add-recipe">Add a New Recipe </a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
 
 <!-- old code -->
 <!--<h1 ng-hide="editing"> {{ recipe.name }} </h1>
@@ -12,10 +42,10 @@
 <button ng-show="editing" class="btn btn-sm btn-success" ng-click="saveEditedRecipe()"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
 <button ng-hide="editing" class="btn btn-sm btn-default" ng-click="editing = true"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
 <button class="btn btn-sm btn-danger" ng-click="deleteRecipe()"><span class="glyphicon glyphicon-trash"></span> Delete </button> -->
+<div class="jumbotron">
+    <h1 ng-hide="editing" class="text-uppercase">{{ recipe.name }}</h1>    
+</div>
 
-<hr>
-
-<h1 ng-hide="editing">{{ recipe.name }}</h1>
 
 <input ng-show="editing" ng-model="recipe.name">
 
@@ -38,7 +68,7 @@
 <textarea ng-show="editing"  ng-model="recipe.directions"></textarea>
 
 <!-- ingredient code -->
-<!--<div ng-show="editing">
+<div ng-show="editing">
     <br>
     <label>Ingredient</label>
     <br>
@@ -53,7 +83,9 @@
            class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
     </li>
 </ol>
--->
+
+<!-- end ingredient code -->
+
 <br>
 <button class="btn btn-danger"
         ng-click="deleteRecipe()"> Delete Recipe </button>

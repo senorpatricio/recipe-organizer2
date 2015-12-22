@@ -1,7 +1,20 @@
 
 <h1>Recipe Organizer</h1>
 
+<!--<div class="col-sm-3">
+	<ul ng-controller="RecipesCtrl">
+		<li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }} </a></li>
+	</ul>	
 
-<ul ng-controller="RecipesCtrl">
-	<li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }} </a></li>
-</ul>
+</div>-->
+
+
+<div class="col-sm-6 col-md-4" ng-repeat="recipe in recipes">
+    <div class="recipe-card recipe-card-image">
+        <h3><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a></h3>
+        <!--<img width="200"
+         class="img-responsive"
+         ng-src="{{ recipe.photo }}">-->
+        <p class="recipe-card-description">{{ recipe.description }}</p>
+    </div>
+</div>

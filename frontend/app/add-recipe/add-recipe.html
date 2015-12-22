@@ -1,7 +1,47 @@
-<input type="text" ng-model="recipe.name" placeholder="Recipe Name">
+<!-- <input type="text" ng-model="recipe.name" placeholder="Recipe Name">
 <br>
 <textarea ng-model="recipe.directions" placeholder="Recipe Directions"></textarea>
 <br>
 <textarea ng-model="recipe.description" placeholder="Recipe Description"></textarea>
 <br>
-<button ng-click="addRecipe()">Add Recipe</button>
+<button ng-click="addRecipe()">Add Recipe</button> -->
+
+<div class="col-md-4, col-sm-6">
+    <div class="form-group">
+        <label>Recipe Name:</label>
+        <input class="form-control" ng-model="recipe.name">
+    </div>
+
+    <div class="form-group">
+        <label>Recipe Description:</label>
+        <textarea class="form-control" ng-model="recipe.description"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Recipe Directions:</label>
+        <textarea class="form-control" ng-model="recipe.directions"></textarea>
+    </div>
+
+    <!-- <div class="form-group">
+        <label>Ingredient</label>
+        <input class="form-control" ng-model="ingredientName">
+    </div>
+    <button ng-click="addIngredientToRecipe(ingredientName)"
+            class="btn btn-xs btn-info glyphicon glyphicon-save">Add Ingredient to Recipe</button>
+    <br>
+
+    <ol>
+        <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
+            <i ng-click="removeIngredientFromRecipe(ingredient)"
+               class="btn btn-xs btn-danger glyphicon glyphicon-remove"></i>
+        </li>
+    </ol>
+
+    <div class="form-group">
+        <input type="file" id="file" name="file" accept="image/gif, image/x-png, image/jpeg"
+           onchange="angular.element(this).scope().addPhoto()"/>
+    </div> -->
+
+    <button ng-click="addRecipe()"
+            class="btn btn-xs btn-success glyphicon glyphicon-save-file">Save Recipe</button>
+</div>
